@@ -134,7 +134,7 @@ commandHandlers.goose = function (message, args) {
 
 commandHandlers.bun = function (message, args) {
   
-  flickrRandomPhotoByGroup("28064328@N00", function (picture) {
+  flickrRandomPhotoByGroup("689183@N25", function (picture) {
     
     if (picture) {
       
