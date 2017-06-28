@@ -7,7 +7,7 @@ let Flickr = require("flickrapi");
 
 let help = "**Animals**\n";
 help += "Gets important pictures of important animals.\n";
-help += "*!shoob*, *!pangolin*, *!corgi*, *!duck*, *!goose*, *!seal*, *!opossum*.\n";
+help += "*!shoob*, *!pangolin*, *!corgi*, *!duck*, *!goose*, *!seal*, *!opossum*, *!bun*.\n";
 
 //** Set up Flickr api
 
@@ -121,6 +121,20 @@ commandHandlers.seal = function (message, args) {
 commandHandlers.goose = function (message, args) {
   
   flickrRandomPhotoByGroup("979023@N22", function (picture) {
+    
+    if (picture) {
+      
+      message.channel.send(picture);
+      
+    }
+    
+  });
+  
+};
+
+commandHandlers.bun = function (message, args) {
+  
+  flickrRandomPhotoByGroup("28064328@N00", function (picture) {
     
     if (picture) {
       
